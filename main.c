@@ -576,7 +576,7 @@ int main() {
       {
       has_changed_colors_backward = false;
       #pragma omp for 
-      for (int k = 0; k < E; k++) {
+      for (int k = E-1; k >=0; k--) {
         if (is_in_SCC[I[k]] || is_in_SCC[J[k]]) {
           continue;
         }
